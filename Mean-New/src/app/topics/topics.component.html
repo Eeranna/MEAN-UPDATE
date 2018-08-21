@@ -1,0 +1,55 @@
+<h3 style="color: blue">Angular Application with Spring Boot REST services from MongoDB</h3><hr>
+    <table>
+       <thead style="color: green">
+          <tr>
+              <th>Eid</th>
+               <th>Name</th>
+               <th>Age</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+              </thead><br>
+              <tbody style="color: blue">
+              <tr *ngFor="let topic of topics">
+                <td>{{topic.eid}}</td>
+                <td>{{topic.name}}</td>
+                <td>{{topic.age}}</td>
+                <td>{{topic.email}}</td>
+                <button mat-raised-button color="primary" (click)="editTopic(topic)">Edit</button>&nbsp;&nbsp;
+                <button mat-raised-button color="accent" (click)="deleteTopic(topic)">Delete</button>
+              </tr>
+              </tbody>
+            </table>
+
+<!--<div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        &lt;!&ndash; Position Column &ndash;&gt;
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id. </th>
+          <td mat-cell *matCellDef="let topics"> {{topics.id}} </td>
+        </ng-container>
+
+        &lt;!&ndash; Name Column &ndash;&gt;
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let topics"> {{topics.name}} </td>
+        </ng-container>
+
+        &lt;!&ndash; Weight Column &ndash;&gt;
+        <ng-container matColumnDef="age">
+          <th mat-header-cell *matHeaderCellDef> Age </th>
+          <td mat-cell *matCellDef="let topics"> {{topics.age}} </td>
+        </ng-container>
+
+        &lt;!&ndash; Symbol Column &ndash;&gt;
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let topics"> {{topics.email}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>-->

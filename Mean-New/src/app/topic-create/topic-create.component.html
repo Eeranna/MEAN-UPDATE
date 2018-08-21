@@ -1,0 +1,85 @@
+
+<!--<div class="container">
+  <div class="row">
+    <div class="panel with-nav-tabs panel-primary">
+      <div class="panel-body">
+       <div class="col-md-6">
+        <form novalidate [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <h3 style="color: blue">Topic Details</h3><hr>
+            <div class="form-group">
+              <label>Id</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="id">
+            </div>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="name">
+            </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="age">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="email">
+          </div>
+          <button type="submit" class="btn btn-primary"  [disabled]="!userForm.valid">Submit</button>
+          <button type="button" class="btn btn-warning" (click)="redirectTopicPage()">Cancel</button>
+          <hr>
+          <pre>{{userForm.value | json}}</pre>
+        </form>
+    </div>
+    </div>
+      </div>
+    </div>
+  </div>-->
+<mat-card>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <h3 style="color: blue">Resource Details</h3><hr>
+    <mat-form-field>
+      <input
+        matInput
+        name="eid"
+        type="eid"
+        placeholder="EID"
+        class="form-control"
+        formControlName="eid">
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        name="name"
+        type="name"
+        placeholder="Name"
+        class="form-control"
+        formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        name="age"
+        type="age"
+        placeholder="Age"
+        class="form-control"
+        formControlName="age">
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        name="email"
+        type="email"
+        placeholder="E-MAIL"
+        class="form-control"
+        formControlName="email">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="redirectTopicPage()">Cancel</button>
+  </form>
+</mat-card>
